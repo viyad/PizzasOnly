@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ordering form</title>
+		<link rel="stylesheet" type="text/css" href="css/order_form.css"/>
+		<script src="linked.js"></script> 
+	</head>
+
+<body onload="LoadForm()">
+<header id="main-header" class="bg-success text-white p-4 mb-3">
+	<div class="container">
+		<h1>PizzasOnly ordering form</h1>
+	</div>
+</header>
+<!-- PizzasOnly ordering form : to accept a quantity of pizzas and calculate the price -->
+<div class="container">
+	<div class="card card-body">
+		<p>Simply enter the number of pizzas you want into the input below to find out the cost of your order</p>
+		<form action="#" method="post" id="orderForm" onsubmit="return CheckQuantity()">	
+			<p>
+				<label for="quantity">Enter number of pizzas wanted:</label>
+				<input name="quantity" id="quantity">&nbsp;&nbsp;<span id="errMessage"></span>
+			</p>
+			<p>
+				<input value="Total cost" type="submit" class="btn btn-dark">
+			</p>
+		</form>
+		<div id="message"></div>
+	</div>
+</div>
+</body>
+</html>
